@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section class="dashboard">
+        <!-- <h3 class="p-2">
+            <a href="dashboard.html">dashboard</a>/driver</h3> -->
+        <!-- <p class="mb-4 p-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, quos.</p> -->
+        <!-- <div class="d-flex flex-row-reverse bd-highlight">
+            <a href="#" class=" mx-3 bd-highlight btn btn-primary" role="button">Add <i class="fas fa-upload px-2"></i></a>
+        </div> -->
+
+        <div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="{{ url_for('dashboard') }}" class="breadcrumbs--link">Dashboard</a>
+                </li>
+
+                <li class="breadcrumbs__item ">
+                    <a href="{{ url_for('ride') }}" class="breadcrumbs__link breadcrumbs__link--active">ride</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="p-2 print-container">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div>
+                        <h6 class="m-0 font-weight-bold text-primary py-2 ">ride information</h6>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
+                        <a href="./Add Forms/ARide.html"> <button class="btn btn-primary me-md-2 " type="button ">Add<i class="fas fa-upload px-2"></i></button></a>
+                        <button onclick="myfun()" class="Pbtn btn btn-secondary " type="button ">Print<i class="fas fa-print px-2"></i></button>
+                    </div>
+                </div>
+                <div class="card-body ">
+                    <div class="board table-responsive ">
+                        <table id="example" class="table display" style="width:100% ">
+                            <thead>
+                                <tr>
+                                    <tr>
+                                        <th>ride Name</th>
+                                        <th>ride code</th>
+                                        <th>assembly destination</th>
+                                    </tr>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>maadi</td>
+                                    <td>12568</td>
+                                    <td>
+                                        <a href="">giza to maadi</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

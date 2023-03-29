@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>TRou</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../../../static/TRou/css/style.css">
+        <link rel="stylesheet" href="../../../static/TRou/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="headline">
+                <h1>Welcome to TRou</h1>
+            </div>
+            <form class="form" method="post" action="#">
+                <div class="signup">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Address" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="location" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required="">
+                    </div>
+                    <a href="{% url 'logins' %}" class="btn btn-user btn-block"> SIGN UP </a>
+            
+                    <div class="account-exist"> Already have an account? <a href="{% url 'logins' %}" id="login">Login</a> </div>
+                </div>
+            </form>
+        </div>
+        <script src="../../../static/TRou/js/main.js "></script>
+    </body>
+</html>   

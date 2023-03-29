@@ -1,0 +1,94 @@
+{% include "pages/layout.html" %}
+{% block content %}
+    <section class="dashboard">
+        <!-- <h3 class="p-2">
+            <a href="dashboard.html">dashboard</a>/driver</h3> -->
+        <!-- <p class="mb-4 p-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, quos.</p> -->
+        <!-- <div class="d-flex flex-row-reverse bd-highlight">
+            <a href="#" class=" mx-3 bd-highlight btn btn-primary" role="button">Add <i class="fas fa-upload px-2"></i></a>
+        </div> -->
+
+        <div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="{% url 'dashboard' %}" class="breadcrumbs--link">Dashboard</a>
+                </li>
+
+                <li class="breadcrumbs__item ">
+                    <a href="{% url 'user' %}" class="breadcrumbs__link breadcrumbs__link--active">user</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="p-2 print-container">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div>
+                        <h6 class="m-0 font-weight-bold text-primary py-2 ">user information</h6>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
+                        <button onclick="myfun()" class="Pbtn btn btn-secondary " type="button ">Print<i class="fas fa-print px-2"></i></button>
+                    </div>
+                </div>
+                <div class="card-body ">
+                    <div class="board table-responsive ">
+                        <table id="example" class="table display" style="width:100% ">
+                            <thead>
+                                <tr>
+                                    <tr>
+                                        <th>name</th>
+                                        <th>id</th>
+                                        <th>
+                                            <a href="{% url 'ride' %}">ride</a>
+                                        </th>
+                                        <th>assemble point</th>
+                                        <th>report</th>
+                                        <th>request</th>
+                                    </tr>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="people">
+                                        <img src="../../../static/Img/avatar4.png" alt="">
+                                        <div class="people-de">
+                                            <h5>marco gerges</h5>
+                                            <p>marco@example.com</p>
+                                        </div>
+                                    </td>
+
+                                    <td class="people-id">
+                                        <h5>119000170</h5>
+                                    </td>
+
+
+                                    <td class="people-trip">
+                                        <h5>giza</h5>
+                                    </td>
+                                    <td class="people-trip">
+                                        <h5>talbia</h5>
+                                    </td>
+                                    <td class="people-report">
+                                        <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                                    </td>
+                                    <td class="active">
+                                        <a href="{% url 'request' %}">
+                                            <p>yes</p>
+                                        </a>
+
+                                    </td>
+
+                                    <!-- <td class="active">
+                                            <p>online</p>
+                                        </td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

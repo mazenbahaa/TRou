@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>TRou</title>
+
+        <!-- Google Font: Source Sans Pro -->
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="../static/plugins/fontawesome-free/css/all.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../static/dist/css/adminlte.min.css">
+
+
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/css/all.min.css">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link href="../static/js/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i style="color: #D10000; font-size: 30px;" class="icon fas fa-map-marker-alt"></i>
+                <div style="font-size:30px;" class="logo_name">Route</div>
+                <i id="btn" class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="{{ url_for('dashboard') }}">
+                        <i class="fas fa-th-large"></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                    <span class="tool-tip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="{{ url_for('user') }}">
+                        <i class="far fa-user"></i>
+                        <span class="links_name">User</span>
+                    </a>
+                    <span class="tool-tip">User</span>
+                </li>
+                <!-- <li>
+                    <a href="messages.html">
+                        <i class="far fa-comments"></i>
+                        <span class="links_name">Messages</span>
+                    </a>
+                    <span class="tool-tip">Messages</span>
+                </li> -->
+                <li>
+                    <a href="{{ url_for('driver') }}">
+                        <i class="fas fa-user-shield"></i>
+                        <span class="links_name">driver</span>
+                    </a>
+                    <span class="tool-tip">driver</span>
+                </li>
+                <li>
+                    <a href="{{ url_for('vehicle') }}">
+                        <i class="fas fa-bus-alt"></i>
+                        <span class="links_name">vehicle</span>
+                    </a>
+                    <span class="tool-tip">vehicle</span>
+                </li>
+                <li>
+                    <a href="{{ url_for('ride') }}">
+                        <i class="fas fa-route"></i>
+                        <span class="links_name">ride</span>
+                    </a>
+                    <span class="tool-tip">ride</span>
+                </li>
+                <li>
+                    <a href="{{ url_for('report') }}">
+                        <i class="far fa-newspaper"></i>
+                        <span class="links_name">report</span>
+                    </a>
+                    <span class="tool-tip">report</span>
+                </li>
+                <li>
+                    <a href="{{ url_for('request') }}">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <span class="links_name">Request</span>
+                    </a>
+                    <span class="tool-tip">Request</span>
+                </li>
+                <li>
+                    <a href="setting.html">
+                        <i class="fas fa-cogs"></i>
+                        <span class="links_name">Setting</span>
+                    </a>
+                    <span class="tool-tip">Setting</span>
+                </li>
+                <li>
+                    <a href="{{ url_for('login') }}">
+                        <i id="log_out" class="fas fa-sign-out-alt"></i>
+                        <span class="links_name">log out</span>
+                    </a>
+                    <!--<span class="tool-tip">log out</span>
+                    <form method="post">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}"/>
+                        <input type="hidden" name="{{ logout }}" value="logout">
+                        <input type="submit" value="Logout">
+                    </form>-->
+                </li>
+
+                <li>
+                    <a href="setting.html">
+                        <img class="px-1" src="../static/Img/prof.jpg" alt="profileImg">
+                        <span class="links_name">marco gerges </span>
+                    </a>
+                    <span class="tool-tip">marco gerges</span>
+                </li>
+
+                <!-- <li class="profile">
+                    <div class="profile-details">
+                        <img src="Img/prof.jpg" alt="profileImg">
+                        <div class="name_job">
+                            <div class="name">Marco Gerges Aiad</div>
+                        </div>
+                    </div>
+                    <a href="login/register.html"><i id="log_out" class="fas fa-sign-out-alt"></i></a>
+                </li> -->
+            </ul>
+        </div>
+
+        {% block body %}
+
+        {% endblock %}
+
+        <script src="../static/plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- OPTIONAL SCRIPTS -->
+        <script src="../static/plugins/chart.js/Chart.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../static/dist/js/demo.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="../static/dist/js/pages/dashboard3.js"></script>
+
+        <script src="../static/js/jquery-3.6.0.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/main.js"></script>
+
+        <script src="../static/js/datatables/jquery.dataTables.min.js"></script>
+        <script src="../static/js/datatables/dataTables.bootstrap4.min.js"></script>
+        <script src="../static/js/datatables/datatables-demo.js"></script>
+
+        <script type="text/javascript " src="https://code.jquery.com/jquery-3.5.1.js "></script>
+        <script type="text/javascript " src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js "></script>
+
+        <script>
+            // $(document).ready(function() {
+            //     $('#table_id').DataTable();
+            // });
+    
+            $(document).ready(function() {
+                $('#example').DataTable();
+            });
+    
+            $('.Pbtn').click(function() {
+                var printme = document.getElementById('example');
+                var wme = window.open("", "", "width = 900, height = 700 ");
+                wme.document.write(printme.outerHTML);
+                wme.document.close();
+                wme.focus();
+                wme.print();
+                wme.close();
+            })
+        </script>
+    </body>
+</html>

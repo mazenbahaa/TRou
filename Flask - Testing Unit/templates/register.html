@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>TRou</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../static/TRou/css/style.css">
+        <link rel="stylesheet" href="../static/TRou/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="headline">
+                <h1>Welcome to TRou</h1>
+            </div>
+            <form class="form" method="post" action="#">
+                <div class="signup">
+                {{ register_form.csrf_token }}
+                    <div class="form-group">
+                        {{ register_form.CompanyName( placeholder='Company Name' ) }}
+                    </div>
+                    <div class="form-group">
+                        {{ register_form.Address( placeholder='Address' ) }}
+                    </div>
+                    <div class="form-group">
+                        {{ register_form.Location( placeholder='location' ) }}
+                    </div>
+                    <div class="form-group">
+                        {{ register_form.Email( placeholder='Email' ) }}
+                    </div>
+                    <div class="form-group">
+                        {{ register_form.Password( placeholder='Password' ) }}
+                    </div>
+                    <div class="form-group">
+                        {{ register_form.confirm_password( placeholder='confirm_password' ) }}
+                    </div>
+
+                    {{ register_form.submit() }}
+            
+                </div>
+
+                <!--{{ register_form.hidden_tag() }}
+                    {{ register_form.CompanyName( placeholder = "CompanyName") }}
+                    {{ register_form.Location( placeholder = "Location") }}
+                    {{ register_form.Address( placeholder = "Address") }}
+                    {{ register_form.Email( placeholder = "Email") }}
+                    {{ register_form.Password( placeholder = "Password") }}
+                    {{ register_form.confirm_password( placeholder = "Confrim Password") }}
+                    {{ register_form.submit() }}-->
+
+                <div class="account-exist"> Already have an account? <a href="{{ url_for('login') }}" id="login">Login</a> </div>
+            </form>
+        </div>
+        <script src="../static/TRou/js/main.js "></script>
+    </body>
+</html>   

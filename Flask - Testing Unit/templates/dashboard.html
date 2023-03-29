@@ -1,0 +1,195 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section class="dashboard">
+
+        <div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="{{ url_for('dashboard') }}" class="breadcrumbs--link">Dashboard</a>
+                </li>
+
+                <li class="breadcrumbs__item ">
+                    <a href="{{ url_for('dashboard') }}" class="breadcrumbs__link breadcrumbs__link--active">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Small boxes (Stat box) -->
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>150</h3>
+
+                                <p>users</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion far fa-user"></i>
+                            </div>
+                            <a href="{{ url_for('user') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>50</h3>
+
+                                <p>Drivers</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion fas fa-user-shield"></i>
+                            </div>
+                            <a href="{{ url_for('driver') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-warning">
+                            <div class="inner">
+                                <h3>44</h3>
+
+                                <p>User requests</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion fas fa-envelope-open-text"></i>
+                            </div>
+                            <a href="{{ url_for('request') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-danger">
+                            <div class="inner">
+                                <h3>75</h3>
+
+                                <p>vehicles</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion fas fa-bus-alt"></i>
+                            </div>
+                            <a href="{{ url_for('vehicle') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                </div>
+
+
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header border-0">
+                                        <div class="d-flex justify-content-between">
+                                            <h3 class="card-title">New Users</h3>
+                                            <a href="javascript:void(0);">View Report</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <p class="d-flex flex-column">
+                                                <span class="text-bold text-lg">100</span>
+                                                <span>Visitors Over Time</span>
+                                            </p>
+                                            <p class="ml-auto d-flex flex-column text-right">
+                                                <span class="text-success">
+                                      <i class="fas fa-arrow-up"></i> 12.5%
+                                    </span>
+                                                <span class="text-muted">Since last week</span>
+                                            </p>
+                                        </div>
+                                        <!-- /.d-flex -->
+
+                                        <div class="position-relative mb-4">
+                                            <canvas id="visitors-chart" height="200"></canvas>
+                                        </div>
+
+                                        <div class="d-flex flex-row justify-content-end">
+                                            <span class="mr-2">
+                                    <i class="fas fa-square text-primary"></i> This Week
+                                  </span>
+
+                                            <span>
+                                    <i class="fas fa-square text-gray"></i> Last Week
+                                  </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card -->
+
+
+                                <!-- /.card -->
+                            </div>
+                            <!-- /.col-md-6 -->
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header border-0">
+                                        <div class="d-flex justify-content-between">
+                                            <h3 class="card-title">Sales</h3>
+                                            <a href="javascript:void(0);">View Report</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <p class="d-flex flex-column">
+                                                <span class="text-bold text-lg">$18,230.00</span>
+                                                <span>Sales Over Time</span>
+                                            </p>
+                                            <p class="ml-auto d-flex flex-column text-right">
+                                                <span class="text-success">
+                                      <i class="fas fa-arrow-up"></i> 33.1%
+                                    </span>
+                                                <span class="text-muted">Since last month</span>
+                                            </p>
+                                        </div>
+                                        <!-- /.d-flex -->
+
+                                        <div class="position-relative mb-4">
+                                            <canvas id="sales-chart" height="200"></canvas>
+                                        </div>
+
+                                        <div class="d-flex flex-row justify-content-end">
+                                            <span class="mr-2">
+                                    <i class="fas fa-square text-primary"></i> This year
+                                  </span>
+
+                                            <span>
+                                    <i class="fas fa-square text-gray"></i> Last year
+                                  </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card -->
+
+
+                            </div>
+                            <!-- /.col-md-6 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <!-- /.content -->
+
+                <div class="p-2">
+                    <div class="card shadow mb-4">
+                        <div class="card">
+                            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.8871219255884!2d31.280407414499937!3d29.98267382844422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458388b7564400d%3A0xab2578ea95e6631f!2sModern%20Academy%20-%20Computer%20Science!5e0!3m2!1sen!2seg!4v1638962117240!5m2!1sen!2seg"
+                                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Location</h5>
+                                <p class="card-text text-center">Tap to track Bus</p>
+                                <a href="#" class=" w-100 btn btn-success">Track</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </section>
+{% endblock %}
